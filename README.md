@@ -19,11 +19,3 @@
 认证 JSON 包含登录状态，使用后请妥善保管或删除。如果同一个 Profile 登录了多个 Google 账号，导出的 Google Cookie 可能包含这些账号的会话；建议每个账号使用独立 Profile。不要把导出的 JSON 提交到 GitHub。
 
 可运行 `node --test test/core.test.cjs` 检查格式转换逻辑。
-
-## English
-
-This is an unofficial Chrome companion for the [original AIStudioToAPI project](https://github.com/iBUHub/AIStudioToAPI), which exposes Google AI Studio Build through OpenAI-, Gemini-, and Anthropic-compatible APIs. This extension exports the signed-in Chrome profile's browser state as a Playwright `storageState` JSON file for manual upload to that project's console. My [customized server fork](https://github.com/Peteroooooooo/AIStudioToAPI) is a separate repository; this extension is not part of its Docker image.
-
-Load this unpacked extension from the repository root (the directory containing `manifest.json`) in each Chrome profile you use for AI Studio. Open a signed-in AI Studio tab in that profile, click the extension icon, and choose **从当前标签导出 JSON**. The extension only downloads a local JSON file; it does not upload anything.
-
-The file contains login cookies and local storage. If a profile has multiple Google accounts, it may include cookies for all of them. Keep the file private and never commit it to GitHub.
