@@ -1,6 +1,6 @@
 # 从本机 Chrome 导出 AI Studio 账号
 
-这个扩展读取当前 Chrome Profile 中已登录的 AI Studio 标签及其 Cookie，生成项目使用的 Playwright `storageState` JSON 文件。它只在本机下载文件，不连接 AIStudioToAPI 控制台。
+这是独立的 Chrome 扩展，不属于 AIStudioToAPI 服务端或 Docker 镜像。它读取当前 Chrome Profile 中已登录的 AI Studio 标签及其 Cookie，生成 AIStudioToAPI 可上传的 Playwright `storageState` JSON 文件。扩展只在本机下载文件，不连接控制台。
 
 ## 安装
 
@@ -15,6 +15,8 @@
 3. JSON 会下载到 Chrome 的下载目录。可按需自行上传到控制台。
 
 认证 JSON 包含登录状态，使用后请妥善保管或删除。如果同一个 Profile 登录了多个 Google 账号，导出的 Google Cookie 可能包含这些账号的会话；建议每个账号使用独立 Profile。不要把导出的 JSON 提交到 GitHub。
+
+可运行 `node --test test/core.test.cjs` 检查格式转换逻辑。
 
 ## English
 
