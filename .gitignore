@@ -1,0 +1,6 @@
+# Exported browser sessions and local configuration
+auth-*.json
+aistudio-auth-*.json
+.env*
+node_modules/
+*.log
